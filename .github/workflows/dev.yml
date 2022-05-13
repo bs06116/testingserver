@@ -14,6 +14,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ftp.app4orce.com
-        username: master@app4orce.com
+        username: dev@app4orce.com
         password: ${{ secrets.FTP_PASSWORD }}
 
