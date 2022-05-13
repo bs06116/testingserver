@@ -6,8 +6,8 @@ on:
         - master
         
 jobs:
-  web-deploy:
-    name: Deploy
+  build:
+
     runs-on: ubuntu-latest
     steps:
     - name: Get latest code
