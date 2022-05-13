@@ -1,8 +1,10 @@
 name: Deploy website on master brachn when push
+
 on:
   push:
       branches:
         - master
+        
 jobs:
   web-deploy:
     name: Deploy
