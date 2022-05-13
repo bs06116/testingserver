@@ -1,3 +1,4 @@
+name: main
 on:
  push:
     branches:
@@ -16,6 +17,8 @@ jobs:
         server: ftp.app4orce.com
         username: master@app4orce.com
         password: ${{ secrets.FTP_PASSWORD }}
+
+name: dev
 
 on:
  push:
