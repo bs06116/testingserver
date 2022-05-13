@@ -1,13 +1,7 @@
-name: Deploy website on master brachn when push
-
-on:
-  push:
-      branches:
-        - master
-        
+on: push
 jobs:
-  build:
-
+  web-deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Get latest code
