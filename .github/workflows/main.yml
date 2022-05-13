@@ -16,3 +16,23 @@ jobs:
         server: ftp.app4orce.com
         username: master@app4orce.com
         password: ${{ secrets.FTP_PASSWORD }}
+
+on:
+ push:
+    branches:
+      - development
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v2.3.2
+    
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.app4orce.com
+        username: dev@app4orce.com
+        password: ${{ secrets.FTP_PASSWORD }}
+
